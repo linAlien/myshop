@@ -1,0 +1,184 @@
+.swiper-container {
+  position: relative;
+  box-shadow: 0 1px 17px rgba(150, 150, 150, 0.1);
+}
+
+.swiper_box {
+  width: 100%;
+  height: 230rpx;
+  background-color: #fff;
+}
+
+swiper-item image {
+  width: 100%;
+}
+
+.swiper-container .dots {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+page {
+  background-color: #f5f5f5;
+  padding-bottom: 3.5rem;
+}
+
+.info image {
+  width: 100%;
+  display: block;
+}
+
+.info .title, .detail {
+  display: block;
+  padding: 2%;
+  background-color: white;
+}
+
+.info .detail text:first-child {
+  color: #fe5656;
+  font-weight: bolder;
+}
+
+.info .detail text:last-child {
+  color: #d0d0d0;
+  float: right;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  height: 1.5rem;
+}
+
+.options {
+  width: 94%;
+  padding: 3%;
+  font-size: 0.8rem;
+  color: gray;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.margin-top-1rem {
+  margin-top: 3%;
+}
+
+.col {
+  display: block;
+  /* width: 100%; */
+  line-height: 2.4rem;
+}
+
+.color-black {
+  color: #000;
+}
+
+.floatRight {
+  float: right;
+}
+
+.bottom {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 1px 1px 17px rgba(150, 150, 150, 0.1);
+}
+
+.bottom .right {
+  width: 50%;
+  background-color: skyblue;
+  float: right;
+  font-size: 0.8rem;
+  line-height: 3rem;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to right, #f10102, #e94c24);
+}
+
+.bottom .col {
+  width: 20%;
+  margin: 0 2.5%;
+  float: left;
+  margin-top: 0.5rem;
+}
+
+.bottom .col image {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 auto;
+}
+
+.bottom .col text {
+  font-size: 0.7rem;
+  color: gray;
+  text-align: center;
+  display: block;
+  line-height: 1rem;
+}
+
+.position {
+  position: relative;
+  top: 0;
+}
+
+.mask-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mask-box .option-box {
+  width: 94%;
+  padding: 3%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.mask-box .option-box .row {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.mask-box .option-box .row text:nth-child(1) {
+  color: #8c8c8c;
+  display: block;
+  font-size: 0.8rem;
+  width: 100%;
+  line-height: 1.5rem;
+}
+
+.mask-box .option-box .row view {
+  display: block;
+  float: left;
+  width: 15%;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mask-box .hide-box {
+  height: 60%;
+  width: 94%;
+  padding: 3%;
+  display: block;
+}
+
+.mask-box .option-box button {
+  width: 100%;
+  background: linear-gradient(to right, #f10102, #e94c24);
+  color: #fff;
+}
+
+.mask-box .option-box button::after {
+  border: none;
+}

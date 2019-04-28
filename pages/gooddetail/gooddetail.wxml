@@ -1,0 +1,72 @@
+<view class="swiper-container">
+  <swiper class="swiper_box" style='height:{{deviceWidth}}px' autoplay="{{autoplay}}" indicator-dots interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{goodInfo.image_ids}}" wx:key="id">
+      <swiper-item>
+        <image mode='widthFix' data-index='{{index}}' data-id="{{item.businessId}}" src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='info'>
+  <!-- <image src='{{goodInfo.basicInfo.pic}}' style='height:{{deviceWidth}}px' mode='aspectFill'></image> -->
+  <view class='detail'>
+    <text>¥ {{goodInfo.price}}</text>
+    <text> 销量:{{goodInfo.basicInfo.numberOrders}}浏览{{goodInfo.basicInfo.views}}</text>
+  </view>
+  <text class='title' style='padding:1% 2%'>{{goodInfo.basicInfo.name}}</text>
+</view>
+<!-- 选择规格 -->
+<view class='options margin-top-1rem'>
+  <text class='col color-black'>产品信息</text>
+  <text class='col'>产品分类<text class='floatRight'>{{goodInfo.category.name}}</text></text>
+  <!-- <text class='col'>产品状态<text class='floatRight'>{{goodInfo.basicInfo.statusStr}}</text></text> -->
+  <!-- <text class='col'>产品说明<text class='floatRight'>{{goodInfo.logistics.feeTypeStr}}</text></text> -->
+  <text class='col'>更新时间<text class='floatRight'>{{goodInfo.basicInfo.dateUpdate}}</text></text>
+  <!-- <text class='col'>产品库存<text class='floatRight'>{{goodInfo.basicInfo.stores}} 片/砖/沱</text></text> -->
+  <!-- <text class='col' hidden='{{goodInfo.logistics.details.length == 0}}'>快递首单<text class='floatRight'>¥ {{goodInfo.logistics.details[0].firstAmount * goodInfo.logistics.details[0].firstNumber + goodInfo.logistics.details[0].addAmount * goodInfo.logistics.details[0].addNumber}}</text>
+  </text> -->
+  <text class='col' wx:if="{{goodInfo.logistics.details.length == 0}}">快递<text class='floatRight'>包邮</text></text>
+  <rich-text nodes="{{escape2Html}}"></rich-text>
+</view>
+<!-- 底部 -->
+<view class='bottom'>
+  <view class='col'>
+    <image src='../../image/detail/index.png' bindtap='switchToIndex'></image>
+    <text>首页</text>
+  </view>
+  <!-- <view class='col' bindtap='CollectionThis'>
+    <image src='../../image/detail/cart.png'></image>
+    <text>收藏</text>
+  </view> -->
+  <view class='col' bindtap='switchToCart'>
+    <image src='../../image/detail/col.png'></image>
+    <text>购物车</text>
+  </view>
+  <view class='right' bindtap='isShowMask'>加入购物车</view>
+</view>
+
+<view class='mask-box' wx:if='{{isShowMask}}'>
+  <!-- 快递配置 -->
+  <view class='option-box'>
+    <!-- 快递 -->
+    <view class='row'>
+      <!-- <text>快递(首单)</text> -->
+      <!-- <text>¥ {{goodInfo.logistics.details[0].firstAmount * goodInfo.logistics.details[0].firstNumber + goodInfo.logistics.details[0].addAmount * goodInfo.logistics.details[0].addNumber}}</text> -->
+    </view>
+    <!-- 数量 -->
+    <view class='row'>
+      <text>选择数量 </text>
+      <view bindtap='CutGoodNum'>-</view>
+      <view>{{goodsNum}}</view>
+      <view bindtap='addGoodNum'>+</view>
+    </view>
+    <!-- 合计 -->
+    <view class='row'>
+      <!-- <text>合计</text> -->
+    </view>
+    <!-- 确定按钮 -->
+    <button bindtap='showAddCart' hover-class='none'>加入购物车</button>
+  </view>
+  <!-- 点击此盒子关闭 -->
+  <view class='hide-box' bindtap='isShowMask'></view>
+</view>

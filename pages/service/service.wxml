@@ -1,0 +1,12 @@
+<map bindtap="click" id="map" longitude="{{shopInfoAndTel.longitude}}" latitude="{{shopInfoAndTel.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height:{{width*0.7}}px;">
+</map>
+<text class='h'>地址</text>
+<text class='detail'>{{shopInfoAndTel.address}}</text>
+
+<text class='h' style='margin-top:0.5rem'>联系电话</text>
+<text class='detail'>{{shopInfoAndTel.tel}}</text>
+
+<button hover-class='none' bindtap='callphone'>
+  <image src='../../image/mine/tel.png' mode='widthFix'></image>
+  <text>一键拨号</text>
+</button>

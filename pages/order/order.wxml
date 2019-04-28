@@ -1,0 +1,33 @@
+<view class='order'>
+  <text wx:for='{{options}}' bindtap='switchOptions' data-index='{{index}}' class='{{item.choose?"active":"default"}}'>{{item.title}}</text>
+</view>
+
+<view class='cart-null' wx:if='{{orderArray.length == 0}}'>
+  <image src='../../image/null/null.png' mode='widthFix'></image>
+  <text>暂无订单</text>
+</view>
+
+<view class='cart-item' wx:for='{{orderArray}}' wx:for-item="item">
+  <view class='detail' wx:for='{{item.list}}' wx:for-item='item' wx:key='order'>
+    <image src='{{item.pic}}' style='height:{{deviceWidth}}px' mode='aspectFill'></image>
+    <text class='title'>{{item.name}}</text>
+    <text class='title price'>¥ {{item.price}}   x  {{item.amount}}</text>
+    <text class='title price'> 小计 ¥{{item.price*item.amount}}</text>
+    <!-- 物流部分 -->
+    <!-- <text class='num' wx:if='{{OrderStatus == 2}}'>快递:{{item.tracking_name}}</text>
+    <text class='num' wx:if='{{OrderStatus == 2}}'>快递单号:{{item.tracking_number}}</text>
+    <text class='copy' wx:if='{{OrderStatus == 2}}' bindtap='copyTrackingNum' data-index='{{index}}'>复制单号</text> -->
+  </view>
+  <view>
+
+    <text class='num'> 邮费合计 ： {{item.logistics_price}} 元</text>
+    <text class='num'> 支付合计 ： {{item.amountReal}} 元</text>
+    <text class='num'> 订单号码 ： {{item.orderNumber}}</text>
+    <text class='num'> 下单时间 ： {{item.dateAdd}}</text>
+    <text class='num'> 订单状态 ： {{item.statusStr}}</text>
+  </view>
+  <view class='options'>
+    <text class='toPayment' bindtap='toPayment' data-index='{{index}}' wx:if='{{OrderStatus == 0}}'>支付</text>
+    <text class='marginRight toPayment' wx:if='{{OrderStatus == 0}}' bindtap='toCancelOrder' data-index='{{index}}' data-index='{{index}}'>取消订单</text>
+  </view>
+</view>

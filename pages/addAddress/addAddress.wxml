@@ -1,0 +1,37 @@
+<form bindsubmit="requestAddNewAddress" bindreset="formReset">
+  <text class='col'>收件人姓名</text>
+  <input placeholder='收件人' name='linkman'></input>
+  <text class='col'>收件人电话</text>
+  <input placeholder='收件人11位数手机号码' type='number' name='phone' maxlength='11'></input>
+
+  <text class='col'>选择收货地址</text>
+  <view class="section">
+    <picker bindchange="bindProvincesChange" value="{{provincesIndex}}" range="{{provinces}}" range-key="name">
+      <view class="picker">
+        选择省份：{{provinces[provincesIndex].name}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker bindchange="bindCityChange" value="{{citysIndex}}" range="{{citys}}" range-key="name">
+      <view class="picker">
+        选择所在城市：{{citys[citysIndex].name}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker bindchange="bindDistrictsChange" value="{{districtsIndex}}" range="{{districts}}" range-key="name">
+      <view class="picker">
+        当前所在区/县：{{districts[districtsIndex].name}}
+      </view>
+    </picker>
+  </view>
+  <textarea placeholder='在此处补全详细地址' name='address'>
+  </textarea>
+
+  <text class='col'>设为默认地址</text>
+  <switch checked='{{isDefaultAddress}}' name='is_default' />
+  <button class='bottom' formType="submit">
+    保存
+  </button>
+</form>

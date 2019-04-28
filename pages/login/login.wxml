@@ -1,0 +1,6 @@
+<image src='../../image/mine/default.jpg' mode='widthFix'></image>
+<view class='guide'>
+  <text>申请获取以下权限</text>
+  <text>获得您的公开信息(昵称，头像等)</text>
+</view>
+<button hover-class='none' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信授权</button>

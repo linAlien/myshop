@@ -1,0 +1,42 @@
+<!-- 收货地址 -->
+<view class='address' bindtap='toChooseAddress' wx:if='{{address}}'>
+  <text class='name'>{{address.linkMan}}</text>
+  <text class='name'>{{address.mobile}}</text>
+  <text class='name'>{{address.provinceStr}}{{address.cityStr}}{{address.areaStr}}{{address.address}}</text>
+</view>
+
+<view class='address' bindtap='toChooseAddress' wx:else>
+  <text class='name'>+  选择一个收货地址</text>
+</view>
+<!-- 分割线条 -->
+<view class='line'></view>
+<!-- 订单详情 -->
+<view class='item' wx:for='{{paymentRes}}'>
+  <view class='col bom'>订单详情</view>
+  <image style='height:{{deviceWidth*0.25}}px' src='{{item.goods.pic}}' mode='widthFix'></image>
+  <view class='content'>
+    <text class='title'>{{item.goods.name}}</text>
+    <text class='title'>¥ {{item.goods.originalPrice}} x {{item.number_goods}}</text>
+    <!-- <text class='title'>添加时间  {{item.goods.dateUpdate}}</text> -->
+    <text class='title'>成交价格  ¥ {{item.count}}</text>
+    <!-- <text class='title' hidden='{{item.logistics.details.length > 0}}'>预估运费  ¥ {{item.count}}</text> -->
+    <!-- <text class='title' wx:if='{{item.logistics.details.length == 0}}'>包邮</text> -->
+  </view>
+</view>
+<view class='item'>
+  <view class='col'>
+    <text>运费</text>
+    <text wx:if="{{!isTransCount}}" bindtap='toChooseAddress'>选择快递</text>
+    <text wx:else>¥ {{TransCount}}</text>
+  </view>
+  <view class='col'>
+    <text>合计</text>
+    <text>¥ {{realAmout}}</text>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class='bottom'>
+  <view>总价 ¥ {{realAmout}} </view>
+  <view bindtap='useWechatPay'>确定订单</view>
+</view>

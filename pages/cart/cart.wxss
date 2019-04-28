@@ -1,0 +1,185 @@
+/* list */
+
+page {
+  background-color: #f5f5f5;
+}
+
+.cart-item {
+  padding: 3%;
+  width: 94%;
+  overflow: hidden;
+  border-bottom: 1px solid #f5f5f5;
+  background-color: #fff;
+}
+
+.cart-item .choose {
+  width: 10%;
+  float: left;
+}
+
+.cart-item .choose view {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  display: block;
+  margin-top: 1.3rem;
+  box-shadow: 0 1px 17px rgba(150, 150, 150, 0.4);
+}
+
+.cart-item .detail {
+  width: 90%;
+  float: left;
+  overflow: hidden;
+}
+
+.cart-item image {
+  width: 25%;
+  display: block;
+  float: left;
+}
+
+.cart-item .title {
+  font-size: 0.8rem;
+  width: 70%;
+  padding: 1% 2.5%;
+  float: left;
+}
+
+.cart-item .price {
+  color: #fe5656;
+  padding: 1% 2.5%;
+}
+
+.cart-item .num {
+  float: right;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.cart-item .options {
+  background-color: pink;
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+.options text {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  float: right;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 1rem;
+  color: gray;
+  border: 1px solid gray;
+}
+
+.option .count {
+  width: 2rem;
+  height: 1rem;
+  font-size: 0.8rem;
+  background-color: #ebebeb;
+}
+
+.cart-null {
+  width: 100%;
+  height: 100%;
+}
+
+.cart-null image {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 30%;
+}
+
+.cart-null text {
+  color: #c3c3c3;
+  display: block;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.cart-null button {
+  width: 50%;
+  border-radius: 10rem;
+  background-color: #fe5656;
+  margin: 1rem auto;
+  color: white;
+}
+
+.cart-null button::after {
+  border: none;
+}
+
+.loadAll {
+  line-height: 3rem;
+  color: gray;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* 结算样式 */
+
+.bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.bottom .detail {
+  width: 70%;
+  float: left;
+}
+
+.bottom .detail .choosed {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-sizing: border-box;
+  float: left;
+}
+
+.bottom .detail .all {
+  line-height: 3rem;
+  color: #565656;
+  float: left;
+  font-size: 0.8rem;
+}
+
+.active {
+  background-color: #f52410;
+  color: #f52410;
+  border: 0.1rem solid #f52410;
+  box-shadow: 0 1px 17px rgba(150, 150, 150, 0.4);
+}
+
+.noactive {
+  color: #fff;
+  border: 0.1rem solid #c3c8ed;
+}
+
+.bottom .detail .total {
+  float: right;
+  line-height: 3rem;
+  font-weight: bold;
+  margin-right: 5%;
+  color: #fe5656;
+}
+
+.bottom .pay {
+  width: 30%;
+  background-color: #f52410;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  float: right;
+  line-height: 3rem;
+}

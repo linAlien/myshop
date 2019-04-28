@@ -1,0 +1,48 @@
+<view class='switch'>
+  <view wx:for='{{category}}' bindtap='switchType' data-index='{{index}}' class="{{item.choose ? 'choose' : 'default' }}">
+    {{item.title}}
+  </view>
+</view>
+<!-- part1 -->
+<view hidden='{{switchType !== 0}}'>
+  <!-- 轮播 -->
+  <view class="swiper-container">
+    <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item>
+          <image mode='widthFix' data-index='{{index}}' data-id="{{item.businessId}}" src="../../image/banner/puer.jpg" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{banners}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <!-- 买家推荐 -->
+  <view class='recommend'>
+    <text style='color:yellow'>✭</text>
+    <text>买家推荐top</text>
+  </view>
+  <view class='contact'>
+    <text>NO.1</text>
+    <text>微信小程序开发</text>
+    <text bindtap='callphone'>立即咨询</text>
+  </view>
+  <image class='main' src='../../image/support/png2.jpg' mode='widthFix'></image>
+  <view class='contact'>
+    <text>NO.2</text>
+    <text>网站建设</text>
+    <text bindtap='callphone'>立即咨询</text>
+  </view>
+  <image class='main' src='../../image/support/png1.jpg' mode='widthFix'></image>
+</view>
+<!-- part2 -->
+<view hidden='{{switchType !== 1}}'>
+  <image bindtap='imgPriview' class='main' src='../../image/support/facai.jpg' mode='widthFix'></image>
+</view>
+<!-- part3 -->
+<view hidden='{{switchType !== 2}}'>
+  <image bindtap='imgPriview' class='main' src='../../image/support/contact.jpg' mode='widthFix'></image>
+</view>

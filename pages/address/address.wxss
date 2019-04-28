@@ -1,0 +1,56 @@
+page {
+  padding-bottom: 4rem;
+}
+
+.item {
+  width: 92%;
+  padding: 4%;
+  padding-top: 0;
+  position: relative;
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  margin-top: 0.5rem;
+  background: -webkit-repeating-linear-gradient(20deg, #009cff, #009cff 10px, #fff 10px, #fff 15px, #ffcb21 15px, #ffcb21 25px, #fff 25px, #fff 30px);
+}
+
+.item text {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.item text:last-child {
+  margin-top: 0.3rem;
+}
+
+.fix {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.bottom {
+  width: 90%;
+  margin: 5%;
+  background: linear-gradient(to right, #f10102, #e94c24);
+  text-align: center;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 0.85rem;
+  border-radius: 0.2rem;
+}
+
+.wechat {
+  background: #44b549 !important;
+}
+
+.defalut {
+  color: #fe5656;
+  padding: 0.1rem;
+  /* background-color: #fe5656; */
+}

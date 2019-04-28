@@ -1,0 +1,30 @@
+image {
+  width: 20%;
+  display: block;
+  margin: 03rem auto;
+  border-radius: 10rem;
+}
+
+.guide {
+  width: 80%;
+  margin: 2rem auto;
+  color: #565656;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
+
+.guide text {
+  display: block;
+  text-align: center;
+}
+
+button {
+  width: 80%;
+  border-radius: 10rem;
+  background-color: #57ad1c;
+  color: white;
+}
+
+button::after {
+  border: none;
+}

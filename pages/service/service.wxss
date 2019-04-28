@@ -1,0 +1,41 @@
+.h {
+  padding: 2% 4%;
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.detail {
+  width: 92%;
+  padding: 0 4%;
+  font-size: 1rem;
+  display: block;
+}
+
+button{
+  position: fixed;
+  bottom: 10%;
+  left: 25%;
+  color: white;
+  text-align: center;
+  width: 50%;
+  border-radius:10rem;
+  background-color: #4cd964;
+}
+button image{
+  width: 20%;
+  float: left;
+  /* display:block; */
+  display: none;
+}
+
+button text{
+  display: block;
+  font-size: 0.8rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  margin:0 auto;
+}
+button::after{
+  border: none;
+}

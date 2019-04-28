@@ -1,0 +1,60 @@
+<view class='search-box'>
+  <navigator url='../search/search' hover-class='none'>
+    <image src='../../image/index/search.png' mode='widthFix'></image>
+    <text style='margin-left:1rem'>搜索品牌/种类/年份</text>
+  </navigator>
+</view>
+<!-- 轮播 -->
+<view class="swiper-container">
+  <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banners}}" wx:key="id">
+      <swiper-item>
+        <image mode='widthFix' data-index='{{index}}' data-id="{{item.businessId}}" src="{{item.image_id}}" class="slide-image" lazy-load='true' bindtap='toGoodDetail' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{banners}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+<!-- 特价活动 -->
+<view class='category' wx:if='{{!isCategoryNull}}'>
+  <text class='t-title'>
+  <text class='t-col'>ⅼ</text> 特价活动
+  </text>
+  <view class='ba-box' wx:for='{{coupon}}' bindtap='RoutertoSearch' data-index='{{index}}' data-key='coupon'>
+    <image class='ba' src='{{item.icon}}' mode='widthFix'></image>
+  </view>
+</view>
+<!-- 分类部分 -->
+<view class='category' wx:if='{{!isCategoryNull}}'>
+  <text class='t-title'>
+  <text class='t-col'>ⅼ</text> 精品分类
+  </text>
+  <view wx:for='{{category}}' bindtap='RoutertoSearch' data-index='{{index}}' data-key='category'>
+    <image src='{{item.image_id}}' mode='aspectFill'></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<!-- 品牌部分 -->
+<view class='brand' style='display:none'>
+  <text class='t-title'>
+  <text class='t-col'>ⅼ</text> 品牌专区
+  </text>
+</view>
+<!-- 推荐 -->
+<view class='recommend'>
+  <text class='t-title'>
+  <text class='t-col'>ⅼ</text> 推荐商品
+  </text>
+  <view wx:key='key' wx:for='{{recommed}}' bindtap='toProductDetail' data-index='{{index}}'>
+    <image src='{{item.image_ids[0]}}' mode='aspectFill' style='height:{{deviceWidth*0.3}}px' lazy-load='true'></image>
+    <text class='title'>{{item.name}}</text>
+    <text class='sale'>重量{{item.weight}}kg<text style='float:right;margin-right:3%'>浏览 {{item.views}}</text> </text>
+    <text class='price'>¥{{item.price}}</text>
+  </view>
+</view>
+<!-- <text class='tip' wx:if='{{isLoadAll}}'>没有更多商品了</text>
+<text class='tip' wx:else>正在加载...</text> -->

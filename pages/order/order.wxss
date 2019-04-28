@@ -1,0 +1,186 @@
+page {
+  background-color: #fff;
+}
+
+.order {
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 1px 1px 17px rgba(150, 150, 150, 0.1);
+}
+
+.order text {
+  /* width:15%; */
+  width: 20%;
+  margin: 0 2.5%;
+  text-align: center;
+  display: block;
+  float: left;
+  line-height: 3rem;
+  font-size: 0.8rem;
+}
+
+.active {
+  color: #fe5656;
+  border-bottom: 2px solid #fe5656;
+}
+
+.default {
+  color: #c3c3c3;
+  border-bottom: 2px solid #fff;
+}
+
+.cart-null {
+  width: 80%;
+  margin: 20% 0;
+}
+
+.cart-null image {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+
+.cart-null text {
+  color: #c3c3c3;
+  display: block;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.cart-null button {
+  width: 50%;
+  border-radius: 10rem;
+  background-color: #fe5656;
+  margin: 2rem auto;
+  color: white;
+}
+
+.cart-null button::after {
+  border: none;
+}
+
+/* list */
+
+.cart-item {
+  padding: 3%;
+  width: 94%;
+  overflow: hidden;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.cart-item .detail {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  padding: 0.2rem 0;
+}
+
+.cart-item image {
+  width: 25%;
+  display: block;
+  float: left;
+}
+
+.cart-item .title {
+  font-size: 0.8rem;
+  width: 70%;
+  padding: 0 2.5%;
+  float: left;
+}
+
+.cart-item .price {
+  color: gray;
+  font-weight: bold;
+  padding: 0 2.5%;
+  width: 70%;
+  display: block;
+}
+
+.cart-item .num {
+  width: 100%;
+  display: block;
+  color: gray;
+  clear: both;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  font-weight: bold;
+}
+
+.cart-item .options {
+  background-color: pink;
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+.options text {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  float: right;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 1rem;
+  color: gray;
+  border: 1px solid gray;
+}
+
+.marginRight {
+  margin-right: 0.5rem;
+}
+
+.option .count {
+  width: 2rem;
+  height: 1rem;
+  font-size: 0.8rem;
+  background-color: #ebebeb;
+}
+
+.cart-null {
+  width: 100%;
+}
+
+.cart-null image {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.cart-null text {
+  color: #c3c3c3;
+  display: block;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.cart-null button {
+  width: 50%;
+  border-radius: 10rem;
+  background-color: #fe5656;
+  margin: 2rem auto;
+  color: white;
+}
+
+.cart-null button::after {
+  border: none;
+}
+
+.loadAll {
+  line-height: 3rem;
+  color: gray;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.copy {
+  background-color: #ebebeb;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  color: #565656;
+  float: right;
+}

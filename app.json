@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/service/service",
+    "pages/mine/mine",
+    "pages/cart/cart",
+    "pages/category/category",
+    "pages/gooddetail/gooddetail",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/payment/payment",
+    "pages/address/address",
+    "pages/addAddress/addAddress",
+    "pages/support/support",
+    "pages/category2/category2"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a1a1a1",
+    "selectedColor": "#ff4a2f",
+    "backgroundColor": "#fbfbfb",
+    "height": "5rem",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "image/bottom/indexd.png",
+        "iconPath": "image/bottom/index.png",
+        "pagePath": "pages/index/index",
+        "text": "推荐"
+      },
+      {
+        "selectedIconPath": "image/bottom/categoryd.png",
+        "iconPath": "image/bottom/category.png",
+        "pagePath": "pages/category/category",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "image/bottom/serviced.png",
+        "iconPath": "image/bottom/service.png",
+        "pagePath": "pages/service/service",
+        "text": "联系"
+      },
+      {
+        "selectedIconPath": "image/bottom/cartd.png",
+        "iconPath": "image/bottom/cart.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "image/bottom/mined.png",
+        "iconPath": "image/bottom/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

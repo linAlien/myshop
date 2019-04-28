@@ -1,0 +1,10 @@
+<input placeholder='搜索品牌，种类，年份' bindinput='getSearchKey' bindblur='blurAndRequest' auto-focus='{{isSearchMode}}'></input>
+<view class='recommend'>
+  <view wx:key='key' wx:for='{{goodList}}' bindtap='toProductDetail' data-index='{{index}}'>
+    <image src='{{item.pic}}' mode='aspectFill' style='height:{{deviceWidth*0.3}}px' lazy-load='true'></image>
+    <text class='title'>{{item.name}}</text>
+    <text class='sale'>销量{{item.numberOrders}}件<text style='float:right;margin-right:3%'>浏览 {{item.views}}</text> </text>
+    <text class='price'>¥{{item.originalPrice}}</text>
+  </view>
+</view>
+<text class='tip'>{{str}}</text>

@@ -1,0 +1,44 @@
+<view class='category' style='height:{{device}}px'>
+  <scroll-view scroll-y>
+    <view bindtap='switchCategory' data-index="{{index}}" class='item {{item.active? "active" : "actived"}}' wx:for='{{main}}'>{{item.title}}</view>
+  </scroll-view>
+</view>
+
+<view class='fix' bindtap='showFilterMask'>筛选</view>
+<view class='total' style='height:{{device}}px'>
+  <scroll-view scroll-y>
+    <view data-index="{{index}}" class='total-item' wx:for='{{choose}}' bindtap='toGoodListPage'>
+      <image src='{{item.icon}}' mode='aspectFill'></image>
+      <text>{{item.name}}</text>
+      <text wx:if="{{item.choose}}" class='choose-status'>─</text>
+    </view>
+  </scroll-view>
+</view>
+
+<view class='mask' wx:if='{{isShowFilterMask}}'></view>
+<scroll-view scroll-y class='mask-options' wx:if='{{isShowFilterMask}}'>
+  <text class='col'>种类</text>
+  <view class='item {{item.id == options.category_id?"bgc" : ""}}' wx:for='{{data.category}}' data-item='{{item}}' bindtap='filterOptions' data-cate='category_id'>
+    <image src='{{item.icon}}' data-i='{{id}}' style='height:{{deviceWidth * 0.7 * 0.27 * 0.6}}px' mode='aspectFill'></image>
+    <text class='name'>{{item.name}}</text>
+  </view>
+
+  <text class='col'>年份</text>
+  <view class='item {{item.id == options.category_years_id?"bgc" : ""}}' wx:for='{{data.years}}' data-item='{{item}}' bindtap='filterOptions' data-cate='category_years_id'>
+    <image src='{{item.icon}}' mode='widthFix' style='height:{{deviceWidth * 0.7 * 0.27 * 0.6}}px'></image>
+    <text class='name'>{{item.name}}</text>
+  </view>
+
+  <text class='col'>品牌</text>
+  <view class='item {{item.id == options.category_brand_id?"bgc" : ""}}' wx:for='{{data.brand}}' data-item='{{item}}' bindtap='filterOptions' data-cate='category_brand_id'>
+    <image src='{{item.icon}}' mode='widthFix' style='height:{{deviceWidth * 0.7 * 0.27 * 0.6}}px'></image>
+    <text class='name'>{{item.name}}</text>
+  </view>
+
+  <view class='clear'></view>
+
+  <view class='option'>
+    <text bindtap='showFilterMask'>重置</text>
+    <text bindtap='routerToSearchPage'>确定</text>
+  </view>
+</scroll-view>

@@ -1,0 +1,23 @@
+<view class='category' style='height:{{device}}px'>
+  <scroll-view scroll-y>
+    <view bindtap='switchCategory' data-index="{{index}}" class='item {{item.active? "active" : "actived"}}' wx:for='{{main}}'>{{item.title}}</view>
+  </scroll-view>
+</view>
+<view class='total' style='height:{{device}}px'>
+  <scroll-view scroll-y>
+    <view data-index="{{index}}" class='total-item' wx:for='{{choose}}' bindtap='toGoodListPage'>
+      <image src='{{item.icon}}' mode='aspectFill'></image>
+      <text>{{item.name}}</text>
+      <text wx:if="{{item.choose}}" class='choose-status'>─</text>
+    </view>
+  </scroll-view>
+</view>
+<view class='choose' hidden='{{choosed.length == 0}}'>
+  <view data-index="{{index}}" class='total-item' wx:for='{{choosed}}'>
+    <image src='{{item.icon}}' mode='aspectFill'></image>
+    <text>{{item.name}}</text>
+  </view>
+  <view>
+    <view class='btn' hover-class='none' bindtap='routeToSearchPage'>选好了</view>
+  </view>
+</view>

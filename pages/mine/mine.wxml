@@ -1,0 +1,44 @@
+<view class='top'>
+  <image src='{{user.avatar_url}}' mode='widthFix'></image>
+  <text>{{user.nick}}</text>
+</view>
+  <view class='col border-bottom' bindtap='toAllorder' hover-class='none'>
+    <image src='../../image/mine/order.png' mode='widthFix'></image>
+    <text>我的订单</text>
+    <text>></text>
+  </view>
+
+<view class='order-options margin-bottom'>
+  <view class='options-item' wx:for='{{status}}' bindtap='routerToOrder' data-index='{{index}}'>
+    <image src='{{item.image}}' mode='widthFix'></image>
+    <text>{{item.status}}</text>
+  </view>
+  <!-- <view class='options-item'>
+    <image src='../../image/mine/trans.png' mode='widthFix'></image>
+    <text>待收货</text>
+  </view>
+  <view class='options-item'>
+    <image src='../../image/mine/check.png' mode='widthFix'></image>
+    <text>待签收</text>
+  </view>
+  <view class='options-item'>
+    <image src='../../image/mine/comment.png' mode='widthFix'></image>
+    <text>待评价</text>
+  </view> -->
+</view>
+<navigator url='../address/address' hover-class='none'>
+  <view class='col border-bottom'>
+    <image src='../../image/mine/address.png' mode='widthFix'></image>
+    <text>地址管理</text>
+    <text>></text>
+  </view>
+</navigator>
+<view class='col border-bottom'>
+  <image src='../../image/mine/about.png' mode='widthFix'></image>
+  <text>关于我们</text>
+  <text>></text>
+</view>
+
+<navigator url='../support/support' hover-class='none'>
+  <text class='support'>@技术支持</text>
+</navigator>

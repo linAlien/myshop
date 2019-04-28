@@ -1,0 +1,16 @@
+<view class='item' wx:for='{{address}}' bindtap='chooseAddressThis' bindlongtap='bindLongPress' data-index='{{index}}'>
+  <text class='defalut' wx:if='{{item.isDefault}}'>默认地址</text>
+  <text>收件人：{{item.linkMan}}</text>
+  <text>收件电话：{{item.mobile}}</text>
+  <text>收件地址：{{item.provinceStr}}{{item.cityStr}}{{item.areaStr}}-{{item.address}}</text>
+  <view class='line'></view>
+</view>
+<!-- 底部添加收货地址按钮 -->
+<view class='fix'>
+  <view class='bottom wechat' bindtap='importAddressFromWechat'>
+    新建收货地址
+  </view>
+  <!-- <view class='bottom'>
+    新建收货地址
+  </view> -->
+</view>

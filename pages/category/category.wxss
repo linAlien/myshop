@@ -1,0 +1,232 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.category {
+  display: block;
+  width: 24%;
+  height: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  border-right: 1px solid #f5f5f5;
+}
+
+.category scroll-view .item {
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 3rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.active {
+  color: #ff4a2f;
+  box-sizing: border-box;
+  border-left: 2px solid #ff4a2f;
+}
+
+.actived {
+  color: #565656;
+  box-sizing: border-box;
+  border-left: 1px solid #fff;
+}
+
+.total {
+  width: 75%;
+  float: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 3rem;
+  overflow: auto;
+}
+
+.total .total-item {
+  width: 33%;
+  float: left;
+  margin: 0.5rem auto;
+}
+
+.total .total-item image {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.total .total-item text {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  color: #565656;
+  display: block;
+  text-align: center;
+}
+
+.choose-status {
+  font-weight: bold;
+  color: #fe5656 !important;
+  font-size: 1rem !important;
+}
+
+.choose {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 17px rgba(150, 150, 150, 0.2);
+}
+
+.choose .btn {
+  width: 100%;
+  float: left;
+  display: block;
+  text-align: center;
+  line-height: 2.5rem;
+  font-weight: normal;
+  color: #fff;
+  background-color: #fe5656;
+  border-radius: 0;
+  clear: both;
+}
+
+.choose .total-item {
+  width: 25%;
+  float: left;
+  margin: 0.5rem auto;
+}
+
+.choose .total-item image {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.choose .total-item text {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+  color: #565656;
+  display: block;
+  text-align: center;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mask-options {
+  width: 70%;
+  padding: 2.5%;
+  height: 97%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.mask-options .clear {
+  height: 3rem;
+  display: block;
+  background-color: #fff;
+  clear: both;
+}
+
+.mask-options .item {
+  width: 27%;
+  margin: 0 3%;
+  padding: 2% 0;
+  float: left;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #565656;
+}
+
+.mask-options .item image {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.mask-options .item text:last-child {
+  display: block;
+  width: 100%;
+}
+
+.name {
+  line-height: 1.5rem;
+}
+
+.bgc {
+  background-color: #ebebeb;
+}
+
+.col {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  margin-left: 0.3rem;
+  border-top: 1px solid #ebebeb;
+  clear: both;
+}
+
+.option {
+  display: block;
+  position: fixed;
+  background-color: #fff;
+  overflow: hidden;
+  clear: both;
+  bottom: 1rem;
+  right: 1rem;
+  float: right;
+  width: 50%;
+  color: #fff;
+  border-radius: 5rem;
+  z-index: 4;
+  font-size: 0.8rem;
+}
+
+.option text {
+  border: none;
+  width: 50%;
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  background-color: orange;
+  border-radius: 5rem 0 0 5rem;
+}
+
+.option text:last-child {
+  box-sizing: border-box;
+  border-left: 1px solid #fff;
+  background-color: #fe5656;
+  border-radius: 0 5rem 5rem 0;
+}
+
+.fix {
+  background-color: orange;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  position: fixed;
+  border-radius: 1rem 0 0 1rem;
+  padding: 0 1rem;
+  line-height: 2rem;
+  right: 0;
+  top: 70%;
+  z-index: 1;
+}
