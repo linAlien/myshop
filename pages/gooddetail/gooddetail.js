@@ -83,14 +83,14 @@ Page({
       })
       return;
     }
-
-    if (this.data.goodInfo.basicInfo.stores === 0) {
-      wx.showToast({
-        title: '暂无库存',
-        icon: 'none'
-      })
-      return;
-    }
+    // 判断是否有库存
+    // if (this.data.goodInfo.stores === 0) {
+    //   wx.showToast({
+    //     title: '暂无库存',
+    //     icon: 'none'
+    //   })
+    //   return;
+    // }
 
     this.setData({
       isShowMask: !_this.data.isShowMask
@@ -101,19 +101,25 @@ Page({
     let _this = this;
 
     let obj = {
-      goods_id: this.data.goodInfo.basicInfo.id,
+      goods_id: this.data.goodInfo.category_ids.id,
       number_goods: this.data.goodsNum,
       token: wx.getStorageSync('token'),
       shop_id: app.config.shop_id
     }
-
+    let token = wx.getStorageSync('token');
     wx.request({
       method: "GET",
-      url: app.config.host + '/shop/cart/create?goods_id=' + obj.goods_id + "&number_goods=" + obj.number_goods + '&token=' + obj.token + '&shop_id=' + obj.shop_id,
+      url: app.config.host + 'cart/create?goods_id=' + obj.goods_id + "&number_goods=" + obj.number_goods + '&token=' + obj.token + '&shop_id=' + obj.shop_id,
       header: {
-        'content-Type': 'text/html'
+        // 'content-type': 'application/json'，
+        'content-type': 'application/x-www-form-urlencoded',
+        'X-Handler': '',
+        'Authorization': 'Bearer ' + token,
+        'Content-Type': 'application/json',
       },
       success: function(res) {
+        console.log("加入购物车的返回状态");
+        console.log(res);
         if (res.statusCode == 200) {
           switch (res.data.code) {
             case 0:
@@ -185,13 +191,13 @@ Page({
   },
   // 商品数量减
   addGoodNum: function() {
-    if (this.data.goodsNum == this.data.goodInfo.basicInfo.stores) {
-      wx.showToast({
-        title: '没有更多库存',
-        icon: 'none'
-      })
-      return;
-    }
+    // if (this.data.goodsNum == this.data.goodInfo.stores) {
+    //   wx.showToast({
+    //     title: '没有更多库存',
+    //     icon: 'none'
+    //   })
+    //   return;
+    // }
     let _this = this;
     this.setData({
       goodsNum: this.data.goodsNum + 1

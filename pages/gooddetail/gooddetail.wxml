@@ -11,14 +11,14 @@
   <!-- <image src='{{goodInfo.basicInfo.pic}}' style='height:{{deviceWidth}}px' mode='aspectFill'></image> -->
   <view class='detail'>
     <text>¥ {{goodInfo.price}}</text>
-    <text> 销量:{{goodInfo.basicInfo.numberOrders}}浏览{{goodInfo.basicInfo.views}}</text>
+    <text> 重量:{{goodInfo.weight}}浏览{{goodInfo.view_count}}</text>
   </view>
-  <text class='title' style='padding:1% 2%'>{{goodInfo.basicInfo.name}}</text>
+  <text class='title' style='padding:1% 2%'>{{goodInfo.name}}</text>
 </view>
 <!-- 选择规格 -->
 <view class='options margin-top-1rem'>
   <text class='col color-black'>产品信息</text>
-  <text class='col'>产品分类<text class='floatRight'>{{goodInfo.category.name}}</text></text>
+  <text class='col'>产品分类<text class='floatRight'>{{goodInfo.category_ids[0].name}}</text></text>
   <!-- <text class='col'>产品状态<text class='floatRight'>{{goodInfo.basicInfo.statusStr}}</text></text> -->
   <!-- <text class='col'>产品说明<text class='floatRight'>{{goodInfo.logistics.feeTypeStr}}</text></text> -->
   <text class='col'>更新时间<text class='floatRight'>{{goodInfo.basicInfo.dateUpdate}}</text></text>
@@ -30,7 +30,7 @@
 </view>
 <!-- 底部 -->
 <view class='bottom'>
-  <view class='col'>
+  <view class='col' bindtap='switchToIndex'>
     <image src='../../image/detail/index.png' bindtap='switchToIndex'></image>
     <text>首页</text>
   </view>

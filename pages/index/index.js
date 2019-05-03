@@ -119,7 +119,8 @@ Page({
       url: app.config.host + 'banner/list?shop_id=' + app.config.shop_id,
 
       success: function(res) {
-        // console.log(res.data.data);
+        console.log('轮播');
+        console.log(res.data.data);
         if (res.statusCode == 200) {
 
           // let banners_list = [];
